@@ -1,0 +1,6 @@
+name = "libriwouo"
+main = "worker.ts"
+compatibility_date = "2024-09-03"
+
+[assets]
+directory = "./dist"
