@@ -283,7 +283,7 @@ export function SubscriptionLockScreen() {
       </motion.div>
       
       <p className="mt-8 text-center text-xs text-zinc-600 max-w-sm">
-        NeoCompta AI respecte la souveraineté de vos données. Vos documents comptables ne quittent jamais votre espace de stockage local sécurisé.
+        Libriwouô respecte la souveraineté de vos données. Vos documents comptables ne quittent jamais votre espace de stockage local sécurisé.
       </p>
     </div>
   );

@@ -16,19 +16,19 @@ export interface MockUser {
   }[];
 }
 
-const STORAGE_KEY = "neocompta_logged_in_user";
-const LICENSE_KEY = "neocompta_subscription_metadata";
+const STORAGE_KEY = "libriwouo_logged_in_user";
+const LICENSE_KEY = "libriwouo_subscription_metadata";
 
 // Default mock user
 const defaultUser: MockUser = {
   uid: "sovereign-local-user",
-  email: "directeur@neocompta.local",
+  email: "directeur@libriwouo.local",
   displayName: "Directeur Général",
   emailVerified: true,
   isAnonymous: false,
   photoURL: "/mascot.jpg",
   tenantId: null,
-  providerData: [{ providerId: "google.com", email: "directeur@neocompta.local" }]
+  providerData: [{ providerId: "google.com", email: "directeur@libriwouo.local" }]
 };
 
 class MockAuth {
@@ -63,7 +63,7 @@ class MockAuth {
     };
   }
 
-  async mockSignIn(email: string = "directeur@neocompta.local", name: string = "Directeur Général") {
+  async mockSignIn(email: string = "directeur@libriwouo.local", name: string = "Directeur Général") {
     const user: MockUser = {
       uid: "sovereign-local-user", // Keep consistent local UID
       email,

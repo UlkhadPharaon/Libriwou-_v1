@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">NeoCompta AI</string>
-    <string name="title_activity_main">NeoCompta AI</string>
-    <string name="package_name">com.neocompta.ai</string>
-    <string name="custom_url_scheme">com.neocompta.ai</string>
+    <string name="app_name">Libriwouô</string>
+    <string name="title_activity_main">Libriwouô</string>
+    <string name="package_name">com.libriwouo.app</string>
+    <string name="custom_url_scheme">com.libriwouo.app</string>
 </resources>

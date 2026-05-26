@@ -77,7 +77,7 @@ export class QuerySnapshot {
 }
 
 // Database Engine
-const DB_STORAGE_KEY = "neocompta_sovereign_db";
+const DB_STORAGE_KEY = "libriwouo_sovereign_db";
 
 interface DBStructure {
   [collectionName: string]: {

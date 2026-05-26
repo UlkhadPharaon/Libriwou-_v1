@@ -18,8 +18,8 @@ export default defineConfig(({mode}) => {
         },
         includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'pwa-192x192.svg', 'pwa-512x512.svg'],
         manifest: {
-          name: 'NeoCompta AI',
-          short_name: 'NeoCompta',
+          name: 'Libriwouô',
+          short_name: 'Libriwouo',
           description: 'Business Intelligence pour le Burkina Faso et l\'UEMOA',
           theme_color: '#ffffff',
           icons: [

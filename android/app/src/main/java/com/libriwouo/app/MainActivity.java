@@ -1,4 +1,4 @@
-package com.neocompta.ai;
+package com.libriwouo.app;
 
 import com.getcapacitor.BridgeActivity;
 
