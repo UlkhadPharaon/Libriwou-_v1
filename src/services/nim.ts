@@ -40,7 +40,7 @@ export interface UserContext {
 export async function extractTransactionFromFile(file: File): Promise<ExtractedTransaction> {
   const base64 = await fileToBase64(file);
   
-  const response = await fetch('/api/vision', {
+  const response = await fetch(`${API_BASE_URL}/api/vision`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ base64, mimeType: file.type })
@@ -347,7 +347,7 @@ STYLE: Ne sois pas hésitant. Tu as les données. Donne des chiffres. Sois pro-a
 
     // Reasoning Loop
     for (let i = 0; i < 5; i++) { // Limit iterations to prevent infinite loops
-        const response = await fetch('/api/chat', {
+        const response = await fetch(`${API_BASE_URL}/api/chat`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

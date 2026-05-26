@@ -18,6 +18,7 @@ export interface MockUser {
 
 const STORAGE_KEY = "libriwouo_logged_in_user";
 const LICENSE_KEY = "libriwouo_subscription_metadata";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 
 // Default mock user
 const defaultUser: MockUser = {
@@ -103,7 +104,7 @@ class MockAuth {
     try {
       // In production, this would be your remote secure billing server.
       // We will perform a fetch to the backend Express server, with a fallback if offline.
-      const res = await fetch("/api/license", {
+      const res = await fetch(`${API_BASE_URL}/api/license`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email })
