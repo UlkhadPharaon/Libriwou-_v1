@@ -1,0 +1,33 @@
+# SUIVI DES MODIFICATIONS - NEOCCOMPTA AI
+
+## Vision à long terme
+Transition vers Flutter prévue pour une application native premium. 
+- **Décision Stratégique :** Suppression totale de Vercel. 
+- **Architecture Flutter :** Priorité au stockage local (Souveraineté). Recherche d'alternatives gratuites pour le proxy API IA (Piste : Cloudflare Workers ou appels directs sécurisés).
+- **Indépendance :** Réduction de la dépendance à Firebase (uniquement pour le strict nécessaire : abonnements/auth).
+
+## Étapes de correction (Base React/Capacitor)
+
+### 1. Stabilisation de l'Interface Mobile (TERMINÉ)
+- **Objectif :** Rendre l'application utilisable sur smartphone (Notch, Grilles, Tactile).
+- **Actions réalisées :**
+    * Fix Safe-Area (Notch) : Le header mobile respecte désormais `env(safe-area-inset-top)`.
+    * Responsive Dashboard : Les métriques sont en 2x2 compact sur mobile, et les sections sont empilées verticalement.
+    * Nettoyage Logo : Suppression du fond blanc et des bordures "sticker" sur `NeoLogo.tsx`.
+    * Correction Tutoriel : L'auto-start du tour est désormais conditionné à l'authentification de l'utilisateur.
+
+### 2. Optimisation des Performances (TERMINÉ)
+- **Objectif :** Réduire le temps de chargement et la consommation CPU/GPU.
+- **Actions réalisées :**
+    * Code Splitting (React.lazy) : Toutes les pages sont chargées dynamiquement dans `App.tsx`.
+    * Suppression Animation : L'animation `driftGlow` en arrière-plan a été désactivée pour économiser la batterie et le GPU mobile.
+    * Manual Chunks : Configuration de Vite pour séparer les grosses bibliothèques (Recharts, Motion) du reste du code.
+
+### 3. Connectivité Mobile (PRÉPARÉ)
+- **Objectif :** Permettre à l'IA de répondre sur l'APK mobile.
+- **Actions réalisées :**
+    * Support API Absolute URL : `nim.ts` est prêt à utiliser `VITE_API_BASE_URL`.
+- **Note :** En attente de l'URL du serveur de production ou de développement pour finaliser le `.env`.
+
+---
+Dernière mise à jour : 25 Mai 2026
